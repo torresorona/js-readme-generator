@@ -4,6 +4,7 @@ import inquirer from "inquirer";
 import { getLicenses } from "./utils/getLicenses.js";
 import { generateMarkdown } from "./utils/generateMarkdown.js";
 
+const apikey = process.argv[2]
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -46,7 +47,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: "What's is your project's license? \n",
-        choices: await getLicenses(),
+        choices: await getLicenses(apikey),
       },
 ];
 

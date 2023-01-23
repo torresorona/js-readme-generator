@@ -1,7 +1,7 @@
 import { Octokit } from "octokit";
-const octokit = new Octokit({ auth: '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' });
 
-export async function getLicenses() {
+export async function getLicenses(apikey) {
+  const octokit = new Octokit({ auth: apikey });
   let licensesNames = [];
 
   try {
