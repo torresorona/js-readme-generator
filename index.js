@@ -4,7 +4,8 @@ import inquirer from "inquirer";
 import { getLicenses } from "./utils/getLicenses.js";
 import { generateMarkdown } from "./utils/generateMarkdown.js";
 
-const apikey = process.argv[2]
+const apikey = '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';
+// const apikey = process.argv[2]
 
 // TODO: Create an array of questions for user input
 const questions = [
