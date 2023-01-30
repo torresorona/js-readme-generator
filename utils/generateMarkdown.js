@@ -59,61 +59,61 @@ export async function generateMarkdown(data, apikey) {
   const licenseLink = await getLicenseLink(apikey, data.license);
   const githubURL = `https://github.com/${data.github}`;
   return `
-  # ${data.project_name}
+# ${data.project_name}
 
-  ## Description
-  ${data.description}
+## Description
+${data.description}
 
-  ---
+---
 
-  ## Tables of Contents
-  [Description](#description)
+## Tables of Contents
+[Description](#description)
 
-  [Table of Contents](#tablesofcontents)
+[Table of Contents](#tablesofcontents)
 
-  [Installation](#installation)
+[Installation](#installation)
 
-  [Usage](#usage)
+[Usage](#usage)
 
-  [License](#license)
+[License](#license)
 
-  [Contributing](#contributing)
+[Contributing](#contributing)
 
-  [Tests](#tests)
+[Tests](#tests)
 
-  [Questions](#questions)
+[Questions](#questions)
 
-  ---
+---
 
-  ## Installation
-  ${data.install}
+## Installation
+${data.install}
 
-  ---
+---
 
-  ## Usage
-  ${data.usage}
+## Usage
+${data.usage}
 
-  ---
+---
 
-  ## License
-  ${licenseBadge}
+## License
+${licenseBadge}
 
-  [License Page](${licenseLink})
+[License Page](${licenseLink})
 
-  ---
+---
 
-  ## Contributing
-  ${data.contributions}
+## Contributing
+${data.contributions}
 
-  ---
+---
 
-  ## Tests
-  ${data.tests}
+## Tests
+${data.tests}
 
-  ---
+---
 
-  ## Questions
-  For any questions, please email us at: ${data.email} \n
-  or find me in [Github](${githubURL})
+## Questions
+For any questions, please email us at: ${data.email} \n
+or find me in [Github](${githubURL})
 `;
 }
